@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Study Planner</h1>
+      <p>Add your tasks and stay on track.</p>
+    </header>
+
+    <p class="editHint" id="editHint" style="display:none;">Editing task…</p>
+
+    <section class="card">
+      <form id="taskForm" class="form">
+        <div class="field">
+          <label for="title">Task</label>
+          <input id="title" type="text" placeholder="e.g., Finish OSI lecture notes" required />
+        </div>
+
+        <div class="field">
+          <label for="subject">Subject</label>
+          <input id="subject" type="text" placeholder="e.g., Networking" />
+        </div>
+
+        <div class="field">
+          <label for="due">Due date</label>
+          <input id="due" type="date" />
+        </div>
+
+        <div class="formActions">
+          <button type="submit" class="btn" id="submitBtn">Add Task</button>
+          <button type="button" class="iconBtn" id="cancelEditBtn" style="display:none;">Cancel</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <div class="toolbar">
+        <input id="search" class="search" type="text" placeholder="Search tasks or subjects..." />
+
+        <select id="sortSelect" class="sort">
+          <option value="due">Sort by Due Date</option>
+          <option value="newest">Newest First</option>
+          <option value="oldest">Oldest First</option>
+        </select>
+
+        <div class="filters" id="filters">
+          <button type="button" class="chip active" data-filter="all">All</button>
+          <button type="button" class="chip" data-filter="pending">Pending</button>
+          <button type="button" class="chip" data-filter="done">Completed</button>
+        </div>
+
+        <div class="count" id="count">0 tasks</div>
+      </div>
+
+      <ul class="list" id="taskList"></ul>
+      <p class="empty" id="emptyState">No tasks yet. Add one above 👆</p>
+    </section>
+
+    <footer class="footer">
+      <small>Built by Dulmi • Project 1</small>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
