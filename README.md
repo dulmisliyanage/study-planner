@@ -20,5 +20,5 @@ A fully functional student study planner built using HTML, CSS, and Vanilla Java
 Built as a frontend portfolio project to strengthen practical web development skills.
 
 ## Live Demo
-(Will add after deployment)
+https://dulmisliyanage.github.io/study-planner/
 
